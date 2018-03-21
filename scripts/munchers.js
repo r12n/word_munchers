@@ -230,7 +230,7 @@ $(function() {
       t.current_sprite = (t.current_sprite % 2) ? 0 : 1;
       ctx.drawImage(t.sprite, t.current_sprite * t.width, t.height * 4, t.width, t.height, t.x, t.y, t.width, t.height);
       if (!t.munching) {
-        player.kill("Aargh! You were eaten by a " + t.latin_name + ".");
+        player.kill("ᎡᎭ! ᏣᏯᎦ " + t.latin_name + ".");
         t.sprite_delay = 8;
         t.munching = false;
         player.reset();
@@ -313,7 +313,7 @@ $(function() {
       }
       else if (!answers[p.col][p.row] && p.sprite_delay === 7) {
         sm.play("wrong");
-        p.kill("Oops! That's not a correct answer!");
+        p.kill("ᎥᎣ! ᎨᏍᏗ ᏱᏚᏳᎪᏛ ᎦᏬᎯᎵᏴᏛ!");
       }
       words[p.col][p.row] = "";
     },
@@ -381,7 +381,7 @@ $(function() {
     ctx.fillStyle = "black";
     ctx.textAlign = "center";
     ctx.font = game.font;
-    ctx.fillText("Press any key to continue", game.width / 2, game.height - 30);
+    ctx.fillText("Spacebar ᎯᏐᏅᏍᏓ ᏨᎵᏱᎵᏍᏗ", game.width / 2, game.height - 30);
     $(document).bind("keydown.start_game", function(e) {
       $(this).unbind(e);
       keyBindings();
@@ -517,7 +517,7 @@ $(function() {
       ctx.font = game.font;
       ctx.textAlign = "center";
       ctx.fillText(str, width / 2 + grid.x_offset, y + 32);
-      ctx.fillText("Press Space Bar to continue.", width / 2 + grid.x_offset, y + 55);
+      ctx.fillText("Spacebar ᎯᏐᏅᏍᏓ ᏨᎵᏱᎵᏍᏗ", width / 2 + grid.x_offset, y + 55);
       ctx.restore();
       $(document).unbind("keydown.normal keyup.normal").bind("keydown.continue", function(e) {
         if (e.keyCode === 32) {
@@ -539,8 +539,8 @@ $(function() {
     ctx.fillStyle = "#ffffff";
     ctx.font = game.font;
     ctx.textAlign = "left";
-    ctx.fillText("Score:  " + game.score, 5, game.height - 22);
-    ctx.fillText("Level: " + game.level, 5, 21);
+    ctx.fillText("ᏚᏂᎾ:  " + game.score, 5, game.height - 22);
+    ctx.fillText("ᎤᏩᎾᏕᏍᎩ: " + game.level, 5, 21);
     ctx.textAlign = "center";
     ctx.fillText($word_data.find("topic").text(), game.width / 2, 31);
     ctx.fillRect(game.width / 2 - topic_width, 10, topic_width * 2, 2);
